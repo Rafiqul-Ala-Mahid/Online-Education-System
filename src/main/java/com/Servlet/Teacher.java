@@ -1,5 +1,8 @@
 package com.Servlet;
 
+import com.Servlet.Dao.TeacherDao;
+import com.Servlet.Models.Course;
+import com.Servlet.Models.User;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -16,8 +19,25 @@ public class Teacher extends HttpServlet{
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         System.out.println("hellos");
-        RequestDispatcher requestDispatcher=request.getRequestDispatcher("/pages/teacher.jsp");
-        requestDispatcher.forward(request,response);
+        HttpSession httpSession=request.getSession();
+
+        User user=(User) httpSession.getAttribute("login");
+        System.out.println(user);
+        TeacherDao teacherDao=new TeacherDao();
+        try{
+
+            List<Course> courses=teacherDao.getCourses(user.getUserId());
+
+
+            request.setAttribute("allCourses",courses);
+            RequestDispatcher requestDispatcher=request.getRequestDispatcher("/pages/teacher.jsp");
+            requestDispatcher.forward(request,response);
+        }
+        catch (Exception e)
+        {
+         e.printStackTrace();
+        }
+
 
     }
 }

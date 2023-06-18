@@ -11,8 +11,8 @@
 <body>
 <%@ include file="/layout/header.jsp" %>
 <div class="w-[80%] bg-gray-200 mx-auto">
-    <div class="pt-5 items-center">
-        <h1 class="text-3xl font-bold text-center">Admin Dashboard</h1>
+    <div class="pt-5 w-[30%] mx-auto items-center">
+        <h1 class="text-3xl border-b-8 border-black pb-3 font-bold text-center">Admin Dashboard</h1>
     </div>
 
 
@@ -143,50 +143,6 @@
                 </table>
             </div>
         </div>
-<%--  Courses Lists   --%>
-
-        <div class="w-full flex flex-col justify-center items-center mt-10 pb-8">
-                    <div class="w-[80%] flex justify-start items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-                        </svg>
-                        <h1 class="text-2xl font-bold ">Courses Lists</h1>
-                    </div>
-                    <div class="w-[80%] mt-3">
-                        <table class="w-full text-s text-left text-gray-500">
-                            <thead class="text-md text-gray-700 bg-gray-50">
-                            <tr>
-                                <th scope="col" class="text-center px-6 py-3">
-                                    Title
-                                </th>
-                                <th scope="col" class="text-center px-6 py-3">
-                                    Total Enrollment
-                                </th>
-                                <th scope="col" class="text-center px-6 py-3">
-                                    Review
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach items="${allTeachers}" var="teacher">
-                                <tr class="bg-white border-b hover:bg-gray-50">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                            ${teacher.name}
-                                    </th>
-                                    <td class="px-6 py-4">
-                                            ${teacher.username}
-                                    </td>
-                                    <td class="px-6 py-4">
-                                            ${teacher.email}
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                            </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
 </div>
 <%@ include file="../../layout/footer.jsp" %>
 </body>

@@ -2,8 +2,6 @@
 pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -15,18 +13,19 @@ pageEncoding="ISO-8859-1"%>
  <%@ include file="../../layout/header.jsp" %>
 <div class='w-[80%] bg-zinc-200 p-5 mx-auto' style="" >
     <div class='flex flex-col justify-center items-center mt-5'>
-        <h1 class='text-[2.5rem] border-b-8 border-sky-600 font-bold text-sky-600'>Enrolled courses</h1>
+        <h1 class='text-[2.5rem] font-bold border-b-8 border-sky-600 text-sky-600'>List of Enrolled Students</h1>
     </div>
-   <div class="w-[80%] mx-auto grid grid-cols-3 gap-20 mt-4 p-5">
 
-              <c:forEach items="${allCourses}" var="course">
-                   <div class="min-w-[300px] border-2 rounded-lg bg-sky-600 flex flex-col justify-center items-center shadow-md pb-5">
-                         <h1 class="text-3xl text-white my-5 font-bold">${course.title}</h1>
-                         <p class="text-l text-white mt-3">${course.summary}</p>
-                   </div>
+    <div class="w-[80%] mx-auto grid grid-cols-3 gap-20 mt-4 p-5">
 
-              </c:forEach>
-    </div>
+                  <c:forEach items="${users}" var="user">
+                       <div class="min-w-[300px] border-2 rounded-lg bg-sky-600 flex flex-col justify-center items-center shadow-md pb-5">
+                             <img class="w-10 mt-5 h-10 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://t4.ftcdn.net/jpg/00/84/67/19/360_F_84671939_jxymoYZO8Oeacc3JRBDE8bSXBWj0ZfA9.jpg" alt="Bordered avatar">
+                             <h1 class="text-3xl text-white my-1 font-bold">Name: ${user.name}</h1>
+                             <p class="text-l text-white mt-1">Email: ${user.email}</p>
+                       </div>
+                  </c:forEach>
+        </div>
 
 </div>
 <%@ include file="../../layout/footer.jsp" %>

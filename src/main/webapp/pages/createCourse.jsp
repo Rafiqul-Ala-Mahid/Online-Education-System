@@ -1,6 +1,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>Courses</title>
@@ -14,10 +15,11 @@
 <%@ include file="/layout/header.jsp" %>
 <div class="w-[80%] bg-zinc-200 mx-auto bg-white">
     <div class="w-full flex flex-col justify-center items-center">
-       <h1>Create a new course</h1>
+       <h1 class="text-[2.5rem] ms-5 mt-5 border-b-8 border-sky-600 font-bold text-sky-600">Create a new course</h1>
     </div>
     <div class="w-full flex justify-center items-center">
-            <form method="POST" action="/webtech3/course" class="w-[60%] flex flex-col items-center mt-10">
+
+            <form method="POST" action="/webtech3/in/admin/createCourse" class="w-[60%] flex flex-col items-center mt-10">
                 <div class="w-full flex flex-col items-start mt-4">
                     <span class="text-xl ms-1 font-bold text-sky-600">Course Title</span>
                     <input type="text" placeholder="Course Title" name="title" class="outline-none mt-2 w-full border-[1px] border-[#9BA4B5] p-2 rounded-md text-xl focus:border-[#142580] focus:border-[2px]">

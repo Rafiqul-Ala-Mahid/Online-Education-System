@@ -23,18 +23,18 @@
 
                       <% if(role.equals("TEACHER")){%>
                                 <li ><a href='/webtech3/logout'>logout</a></li>
-                               <li><a href="webtech3/in/teacher" class="text-lg text-sky-700">
+                               <li><a href="/webtech3/in/teacher" class="text-lg text-sky-700">
                                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Bordered avatar">
                                </a></li>
                       <% } else if(role.equals("ADMIN")) { %>
                                <li><a href="/webtech3/in/admin/createCourse" class="text-lg text-sky-700">Create Course</a></li>
                                <li ><a href='/webtech3/logout'>logout</a></li>
-                               <li><a href="webtech3/in/admin" class="text-lg font-bold text-sky-700">
+                               <li><a href="/webtech3/in/admin" class="text-lg font-bold text-sky-700">
                                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Bordered avatar">
                                </a></li>
                       <% } else if(role.equals("STUDENT")) { %>
                                 <li ><a href='/webtech3/logout'>logout</a></li>
-                               <li><a href="webtech3/in/student" class="text-lg text-sky-700">
+                               <li><a href="/webtech3/in/student" class="text-lg text-sky-700">
                                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Bordered avatar">
                                </a></li>
                       <% } %>

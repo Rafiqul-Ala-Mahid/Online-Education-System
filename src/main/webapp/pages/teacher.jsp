@@ -13,8 +13,22 @@ pageEncoding="ISO-8859-1"%>
  <%@ include file="../../layout/header.jsp" %>
 <div class='w-[80%] bg-zinc-200 p-5 mx-auto' style="" >
     <div class='flex flex-col justify-center items-center mt-5'>
-        <h1 class='text-[2.5rem] font-bold text-sky-600'>teacher rafi</h1>
+        <h1 class='text-[2.5rem] border-sky-600 border-b-8 font-bold text-sky-600'>Assigned Courses</h1>
     </div>
+
+    <div class="w-[80%] mx-auto grid grid-cols-3 gap-20 mt-4 p-5">
+
+                  <c:forEach items="${allCourses}" var="course">
+                  <a href="/webtech3/in/teacher/${course.userId}">
+
+                       <div class="min-w-[300px] border-2 rounded-lg bg-sky-600 flex flex-col justify-center items-center shadow-md pb-5">
+                             <h1 class="text-3xl text-white my-5 font-bold">${course.title}</h1>
+                             <p class="text-l text-white mt-3">${course.summary}</p>
+                       </div>
+
+</a>
+                  </c:forEach>
+        </div>
 
 </div>
 <%@ include file="../../layout/footer.jsp" %>

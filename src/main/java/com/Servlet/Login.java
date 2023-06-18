@@ -35,7 +35,6 @@ public class Login extends HttpServlet{
         try{
 
              user =loginDao.getLoginData(username,password);
-            System.out.println("hello how are you");
             if(user.getPassword().equals(password))
             {
                 HttpSession session=request.getSession();

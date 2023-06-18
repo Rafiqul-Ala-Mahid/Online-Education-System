@@ -1,6 +1,7 @@
 package com.Servlet.utils;
 
 import com.Servlet.Models.Course;
+import com.Servlet.Models.StudentCourse;
 import com.Servlet.Models.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -36,7 +37,7 @@ public class Hibernate {
                     configuration.addAnnotatedClass(User.class);
                     configuration.addAnnotatedClass(Course.class);
 //                    configuration.addAnnotatedClass(Department.class);
-//                    configuration.addAnnotatedClass(Student.class);
+                    configuration.addAnnotatedClass(StudentCourse.class);
 //                    configuration.addAnnotatedClass(Teacher.class);
 //                    configuration.addAnnotatedClass(Registration.class);
 
